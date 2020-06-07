@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "immer": "^6.0.9",
     "next": "latest",
     "next-redux-wrapper": "^6.0.2",
     "react": "16.13.1",

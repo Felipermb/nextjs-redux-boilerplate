@@ -1,10 +1,11 @@
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
 
-import { increment, decrement, reset } from '../actions'
+// Actions
+import { increment, decrement, reset } from '../redux/modules/counter/actions';
 
 const Counter = () => {
-  const count = useSelector((state) => state.count)
-  const dispatch = useDispatch()
+  const count = useSelector((state) => state.counter.count)
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -16,11 +17,11 @@ const Counter = () => {
       <h1>
         Count: <span>{count}</span>
       </h1>
-      <button onClick={() => dispatch(increment())}>+1</button>
       <button onClick={() => dispatch(decrement())}>-1</button>
+      <button onClick={() => dispatch(increment())}>+1</button>
       <button onClick={() => dispatch(reset())}>Reset</button>
     </div>
   )
 }
 
-export default Counter
+export default Counter;
